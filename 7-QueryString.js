@@ -27,35 +27,11 @@ app.get('/product1/:productID',(req,res)=>{
 })
 
 
-app.get('/products/:productID/reviews/:reviewID',(req,res)=>{
+app.get('/product/:productID/reviews/:reviewID',(req,res)=>{
     console.log(req.params)
 
     res.send("hello world")
 })
-
-
-app.get('/api/v1/query',(req,res)=>{
-    const{search,limit}=req.query
-    
-    let sortedProducts=[...products]
-
-    if(search){
-        sortedProducts=sortedProducts.filter((product)=>{
-            return product.name.startsWith(search)
-        })
-        if(limit){
-            return sortedProducts=sortedProducts.slice(0,Number(limit))
-        }
-        if(sortedProducts.length<1){
-            // res.status(200).send('no products are availabe')
-           return res.status(200).json({sucess:true, data:[]})
-        }
-        res.status(200).json(sortedProducts)
-    }
-
-})
-
-
 
 
 
