@@ -1,28 +1,28 @@
 {
-  "name": "node_notes",
+  "name": "express_node_notes",
   "version": "1.0.0",
   "description": "",
-  "main": "1intro.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vdinojkumar/node_js-Notes.git"
+    "url": "git+https://github.com/vdinojkumar/express_nodejs_notes.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vdinojkumar/node_js-Notes/issues"
+    "url": "https://github.com/vdinojkumar/express_nodejs_notes"
   },
-  "homepage": "https://github.com/vdinojkumar/node_js-Notes#readme",
+  "homepage": "https://github.com/vdinojkumar/express_nodejs_notes#readme",
   "dependencies": {
     "bootstrap": "^5.2.3",
     "express": "^4.18.2",
     "loadsh": "^0.0.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.21"
   }
 }

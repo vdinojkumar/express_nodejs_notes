@@ -17,23 +17,9 @@ app.get('/products',(req,res)=>{
 })
 
 app.get('/product/:productID',(req,res)=>{
-
-    const {productID}=req.params;
-    const singleprod=products.find((product)=> product.id===Number(productID))
-    if(!singleprod){
-        return res.status(404).send('Product does not exits')
-    }
+    const singleprod=products.find((product)=> product.id===1)
     res.json(singleprod)
 })
-
-
-app.get('/product/:productID/reviews/:reviewID',(req,res)=>{
-    console.log(req.params)
-
-    res.send("hello world")
-})
-
-
 
 app.listen(5000,()=>{
     console.log('server is listning in port number 5000.....');
