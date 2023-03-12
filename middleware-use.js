@@ -11,7 +11,7 @@ const authorize=require('./authorize')
 // it is applied to all the req 
 // to use mutiple middleware we use array 
 //app.use([logger,authorize])
-app.use(morgan('short'))
+
 
 app.get('/',(req,res)=>{
     res.send('home')
@@ -28,7 +28,7 @@ app.get('/api/product',(req,res)=>{
 
 
 // case : if we want to use mutiple middleware only in single router
-app.get('/api/desc',(req,res)=>{
+app.get('/api/desc',[logger,authorize],(req,res)=>{
     res.send(req.user)
 })
 

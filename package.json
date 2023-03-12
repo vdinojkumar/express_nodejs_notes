@@ -20,7 +20,8 @@
   "dependencies": {
     "bootstrap": "^5.2.3",
     "express": "^4.18.2",
-    "loadsh": "^0.0.4"
+    "loadsh": "^0.0.4",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.21"
