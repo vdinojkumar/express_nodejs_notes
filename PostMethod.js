@@ -44,38 +44,6 @@ app.post('/login',(req,res)=>{
 })
 
 
-app.put('/api/people/:id',(req,res)=>{
-    const{ id }=req.params
-    const{ name }=req.body
-    
-    const person=people.find((person)=>person.id=== Number(id))
-    if(!person){
-        res.status(400).json({sucess:false,msg:`No person with this id ${id}`})
-    }
-    const newpeople=people.map((person)=>{
-        if(person.id === Number(id)){
-            person.name=name
-        }
-        return person
-    })
-     res.status(200).json({sucess:true,data:newpeople})
-})
-
-app.delete('/api/people/:id',(req,res)=>{
-    const person=people.find((person)=>person.id === Number(req.params.id))
-    if(!person){
-        return res
-        .status(400)
-        .json({sucess:false,msg:`No person with this id ${req.params.id}`})
-    }
-
-    const newpeople=people.filter((person)=>person.id !==Number(req.params.id))
-
-    res.status(200).json({sucess:true,data:newpeople})
-})
-
-
-
 app.listen(5000,()=>{
     console.log("server is listining in port 5000........");
 })
